@@ -3,7 +3,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyAlvYyMNrWzEqgUw5k7iV4KPQpmuRRh3ms",
   authDomain: "fds-sorteo.firebaseapp.com",
   projectId: "fds-sorteo",
-  storageBucket: "fds-sorteo.firebasestorage.app",
+  storageBucket: "fds-sorteo.firebasestorage.com",
   messagingSenderId: "240336284711",
   appId: "1:240336284711:web:cd9fc3a1eecfba1b3ef202",
   measurementId: "G-YWLZ4VMNXJ"
