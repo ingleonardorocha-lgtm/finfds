@@ -1,0 +1,76 @@
+:root{
+  --bg:#ffffff;
+  --card:#ffffff;
+  --accent:#0b76ef;
+  --muted:#6b7280;
+  --success:#16a34a;
+  --danger:#dc3545;
+  --gold:#d4af37;
+  --max-width:1200px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:var(--bg);color:#0f172a}
+.header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid rgba(15,23,42,0.04);max-width:var(--max-width);margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px}
+.star{width:56px;height:56px}
+.brand-text h1{margin:0;font-size:1.25rem;color:#111}
+.subtitle{margin:2px 0 0 0;color:var(--muted);font-size:0.95rem}
+
+.login-wrap{display:flex;gap:8px;align-items:center}
+.login-wrap input{padding:8px;border-radius:8px;border:1px solid #e6eefc}
+.btn{background:var(--gold);color:#fff;padding:8px 12px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-secondary{background:#f3f4f6;color:#111}
+
+.container{max-width:var(--max-width);margin:20px auto;padding:0 18px;display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(12,20,30,0.06)}
+
+/* main raffle */
+.rifa h2{margin:0 0 8px 0;font-size:1.25rem}
+.rifa p{margin:6px 0;color:#111}
+.rifa .meta{color:var(--muted);font-size:0.95rem;margin-top:8px;display:flex;gap:12px;flex-wrap:wrap}
+.numeros{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;margin-top:12px}
+.numero{background:var(--success);color:#fff;padding:10px;border-radius:8px;text-align:center;user-select:none;font-weight:700;cursor:default}
+.numero.clickable{cursor:pointer}
+.numero.no-disponible{background:#e5e7eb;color:#374151;text-decoration:line-through}
+
+/* sidebar (admin only when visible) */
+.sidebar.hidden{display:none}
+.sidebar{position:relative}
+.participants{max-height:calc(100vh - 200px);overflow:auto;border-radius:8px;padding:6px}
+.participants-table{width:100%;border-collapse:collapse}
+.participants-table th, .participants-table td{padding:8px;border-bottom:1px solid #f1f5f9;text-align:left;font-size:0.95rem}
+
+/* modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.45);z-index:120;padding:18px}
+.modal.hidden{display:none}
+.modal-card{max-width:520px;width:100%}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* WhatsApp float button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.12s ease-in-out;
+  z-index: 1200;
+}
+.whatsapp-float:hover{ transform: scale(1.05); background-color:#1ebe5b; }
+.whatsapp-float img{ width:36px; height:36px; }
+
+/* responsive */
+@media (max-width:980px){
+  .container{grid-template-columns:1fr; padding:0 12px}
+  .login-wrap{position:static;margin-top:8px}
+  .numero{padding:10px}
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FDS Super STAR - Rifas Online</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="assets/estrella.svg" alt="estrella" class="star" />
+      <div class="brand-text">
+        <h1>FDS Super STAR</h1>
+        <p class="subtitle">Rifas online · Números 00–99</p>
+      </div>
+    </div>
+    <div class="login-wrap" id="login-wrap">
+      <input id="admin-pass" type="password" placeholder="Contraseña admin" aria-label="Contraseña admin" />
+      <button id="btn-login" class="btn">Entrar</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="main-area" id="main-area">
+      <div id="rifa-activa" class="card" aria-live="polite"></div>
+    </section>
+    <aside id="sidebar" class="sidebar hidden" aria-hidden="true"></aside>
+  </main>
+
+  <!-- Modal (exists but only functional in admin mode) -->
+  <div id="assign-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card card">
+      <h3>Asignar número <span id="modal-numero"></span></h3>
+      <label>Nombre</label>
+      <input id="modal-nombre" type="text" placeholder="Nombre completo" />
+      <label>Contacto</label>
+      <input id="modal-contacto" type="text" placeholder="Tel/WhatsApp" />
+      <div class="modal-actions">
+        <button id="modal-cancel" class="btn btn-secondary">Cancelar</button>
+        <button id="modal-save" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/573212820508?text=Buen%20d%C3%ADa%2C%20estoy%20interesado%20en%20comprar%20un%20n%C3%BAmero" 
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <img src="assets/whatsapp.svg" alt="WhatsApp">
+  </a>
+
+  <!-- Firebase compat SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
